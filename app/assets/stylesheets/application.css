@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+ .navbar navbar-fixed-top navbar-inverse {
+   background-color: rgb(162, 11, 38);
+ }

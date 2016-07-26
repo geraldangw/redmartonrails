@@ -2,7 +2,9 @@
 @import "bootstrap";
 
 /* universal */
-
+.navbar navbar-fixed-top navbar-inverse {
+  background-color: rgb(162, 11, 38);
+}
 body {
   padding-top: 60px;
 }
@@ -21,6 +23,10 @@ textarea {
 
 .center h1 {
   margin-bottom: 10px;
+}
+
+.jumbotron {
+  margin-top: 5%;
 }
 
 /* typography */
@@ -96,4 +102,8 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 15px;
+}
+
+#topheader {
+  background-color: rgb(162, 11, 38);
 }

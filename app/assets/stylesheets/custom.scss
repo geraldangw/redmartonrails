@@ -25,6 +25,18 @@ $gray-medium-light: #eaeaea;
 .navbar navbar-fixed-top navbar-inverse {
   background-color: rgb(162, 11, 38);
 }
+.jumbotron {
+  background-image: url(freshfood.jpg);
+}
+#signup, #create, #loginbtn {
+  background-color: rgb(162, 11, 38);
+  border: 1px solid red;
+}
+
+#signupheader, #login {
+  color: rgb(162, 11, 38);
+  margin-top: 3%;
+}
 body {
   padding-top: 60px;
 }

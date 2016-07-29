@@ -9,10 +9,14 @@ User.create!(name:  "Gerald Ang",
              email: "geraldangw@gmail.com",
              password:              "foobar",
              password_confirmation: "foobar",
-             admin: true)
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
 
 (0..85).each do |i|
     User.create(name: Faker::Superhero.name, email: Faker::Internet.email,
     password: "test1234",
-    password_confirmation: "test1234" )
+    password_confirmation: "test1234",
+    activated: true,
+    activated_at: Time.zone.now)
 end

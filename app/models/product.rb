@@ -1,9 +1,13 @@
-class Micropost < ApplicationRecord
+class Product < ApplicationRecord
   belongs_to :user
   default_scope -> { order(created_at: :desc) }
   mount_uploader :picture, PictureUploader
+  validates :product, presence: true
   validates :user_id, presence: true
-  validates :content, presence: true, length: { maximum: 140 }
+  validates :description, presence: true, length: { maximum: 400 }
+  validates :brand, presence: true, length: { maximum: 40 }
+  validates :category, presence: true, length: { maximum: 40 }
+  validates :price, presence: true, length: { maximum: 10 }
   validate  :picture_size
 
   private

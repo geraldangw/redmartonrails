@@ -28,14 +28,14 @@ $gray-medium-light: #eaeaea;
 .jumbotron {
   background-image: url(freshfood.jpg);
 }
-#signup, #create, #loginbtn {
+#signup, #create, #loginbtn, #btn btn-primary {
   background-color: rgb(162, 11, 38);
   border: 1px solid red;
 }
 
 #signupheader, #login {
   color: rgb(162, 11, 38);
-  margin-top: 3%;
+  margin-top: 1%;
 }
 body {
   padding-top: 60px;
@@ -97,7 +97,7 @@ p {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
+  padding-top: 5px;
   font-weight: bold;
 }
 
@@ -268,9 +268,9 @@ input {
   }
 }
 
-/* microposts */
+/* products */
 
-.microposts {
+.products {
   list-style: none;
   padding: 0;
   li {
@@ -281,7 +281,7 @@ input {
     margin-top: 5em;
     padding-top: 0;
   }
-  .content {
+  .description {
     display: block;
     margin-left: 60px;
     img {
@@ -313,4 +313,16 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+.product {
+  display: block;
+  font-size: 18px;
+  font-weight:bold;
+}
+
+#description {
+  font-size: 14px;
+  margin-top: 2%;
+  display: block;
 }

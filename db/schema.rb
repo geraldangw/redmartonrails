@@ -12,14 +12,18 @@
 
 ActiveRecord::Schema.define(version: 20160731055948) do
 
-  create_table "microposts", force: :cascade do |t|
-    t.text     "content"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "products", force: :cascade do |t|
+    t.string   "product"
+    t.text     "description"
+    t.string   "category"
+    t.string   "brand"
+    t.float    "price"
     t.string   "picture"
-    t.index ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
-    t.index ["user_id"], name: "index_microposts_on_user_id"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["user_id", "created_at"], name: "index_products_on_user_id_and_created_at"
+    t.index ["user_id"], name: "index_products_on_user_id"
   end
 
   create_table "relationships", force: :cascade do |t|
@@ -33,8 +37,14 @@ ActiveRecord::Schema.define(version: 20160731055948) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
+    t.string   "salutation"
+    t.string   "firstname"
+    t.string   "lastname"
     t.string   "email"
+    t.string   "contactnum"
+    t.string   "address"
+    t.integer  "zipcode"
+    t.string   "country"
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
     t.string   "password_digest"

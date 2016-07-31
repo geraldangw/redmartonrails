@@ -13,7 +13,11 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts.paginate(page: params[:page])
+    @products = @user.products.paginate(page: params[:page])
+    if logged_in?
+    @product  = current_user.products.build
+    @feed_items = current_user.feed.paginate(page: params[:page])
+  end
   end
 
   def create
@@ -66,7 +70,7 @@ end
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password,
+    params.require(:user).permit(:firstname, :lastname, :address, :salutation, :zipcode, :country, :contactnum, :email, :password,
                                  :password_confirmation)
   end
 

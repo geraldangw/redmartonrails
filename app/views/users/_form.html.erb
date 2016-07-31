@@ -1,11 +1,29 @@
 <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
 
-  <%= f.label :name %>
-  <%= f.text_field :name, class: 'form-control' %>
+  <%= f.select(:salutation, options_for_select([['Mr', 'Mr'], ['Mrs', "Mrs"],
+  ['Ms', 'Ms'],['Master', 'Master']], @user.salutation)) %>
+
+  <%= f.label :firstname %>
+  <%= f.text_field :firstname, class: 'form-control' %>
+
+  <%= f.label :lastname %>
+  <%= f.text_field :lastname, class: 'form-control' %>
 
   <%= f.label :email %>
   <%= f.email_field :email, class: 'form-control' %>
+
+  <%= f.label :Contact %>
+  <%= f.email_field :contactnum, class: 'form-control' %>
+
+  <%= f.label :address %>
+  <%= f.email_field :address, class: 'form-control' %>
+
+  <%= f.label :zipcode %>
+  <%= f.email_field :zipcode, class: 'form-control' %>
+
+  <%= f.label :country %>
+  <%= f.email_field :country, class: 'form-control' %>
 
   <%= f.label :password %>
   <%= f.password_field :password, class: 'form-control' %>

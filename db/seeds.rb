@@ -20,3 +20,18 @@ User.create!(name:  "Gerald Ang",
     activated: true,
     activated_at: Time.zone.now)
 end
+
+(0..10).each do |f|
+Micropost.create!(content: Faker::Hipster.sentence,
+                  user_id: 1)
+                end
+
+(0..10).each do |j|
+Micropost.create!(content: Faker::Hipster.sentence,
+                  user_id: 2 )
+                end
+
+(0..10).each do |x|
+Micropost.create!(content: Faker::Hipster.sentence,
+                  user_id: 3 )
+                end

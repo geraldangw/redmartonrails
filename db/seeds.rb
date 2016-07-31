@@ -35,3 +35,11 @@ Micropost.create!(content: Faker::Hipster.sentence,
 Micropost.create!(content: Faker::Hipster.sentence,
                   user_id: 3 )
                 end
+
+# Following relationships
+users = User.all
+user  = users.first
+following = users[2..50]
+followers = users[3..40]
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }

@@ -14,9 +14,12 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @products = @user.products.paginate(page: params[:page])
+    @reviews = @user.reviews.paginate(page: params[:page])
     if logged_in?
     @product  = current_user.products.build
+    @review = current_user.reviews.build
     @feed_items = current_user.feed.paginate(page: params[:page])
+    @feed_reviews = @product.reviews.paginate(page: params[:page])
   end
   end
 

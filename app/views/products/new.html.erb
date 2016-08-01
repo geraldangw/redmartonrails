@@ -1,3 +1,9 @@
+<% provide(:title, 'Create') %>
+<% provide(:button_text, 'Save changes') %>
+<h1 id="createproduct">Create a Product</h1>
+
+
+<div id="productform">
 <%= form_for(@product, html: { multipart: true }) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
@@ -23,6 +29,7 @@
 
   <%= f.submit "Post", class: "btn btn-primary", id: "loginbtn" %>
 
+</div>
 <% end %>
 
 <script type="text/javascript">

@@ -2,6 +2,11 @@ class ProductsController < ApplicationController
   before_action :logged_in_user, only: [:create, :destroy]
   before_action :correct_user,   only: :destroy
 
+
+  def new
+    @product = Product.new
+  end
+
   def create
     @product = current_user.products.build(product_params)
     if @product.save
@@ -9,7 +14,7 @@ class ProductsController < ApplicationController
       redirect_to root_url
     else
       @feed_items = []
-      render 'static_pages/home'
+      render '/user/:id'
     end
   end
 

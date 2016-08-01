@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :products, dependent: :destroy
+  has_many :reviews, dependent: :destroy
   has_many :active_relationships, class_name:  "Relationship",
                                 foreign_key: "follower_id",
                                 dependent:   :destroy
@@ -81,8 +82,7 @@ end
 def feed
   following_ids = "SELECT followed_id FROM relationships
                    WHERE  follower_id = :user_id"
-  Product.where("user_id IN (#{following_ids})
-                   OR user_id = :user_id", user_id: id)
+  Product.where("user_id IN (#{following_ids})", user_id: id)
 end
 
 # Follows a user.

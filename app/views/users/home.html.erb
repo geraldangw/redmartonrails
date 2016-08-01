@@ -15,7 +15,14 @@
     </aside>
 </aside>
 <div class="col-md-8">
-    <h3>Products</h3>
+    <h3>Get Inspired
+      <a href="<%= following_user_path(@user) %>">
+        <strong id="following" class="stat">
+          Fans of <%= @user.following.count %> users' product recommendations
+        </strong>
+      </a>
+
+    </h3>
     <%= render 'shared/feed' %>
 </div>
 </div>

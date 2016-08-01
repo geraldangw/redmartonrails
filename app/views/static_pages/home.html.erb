@@ -2,7 +2,7 @@
 
 <% if logged_in? %>
 <div class="row">
-    <aside class="col-md-4">
+    <!-- <aside class="col-md-4">
         <section class="user_info">
             <%= render 'shared/user_info' %>
         </section>
@@ -14,11 +14,24 @@
             <%= render 'shared/product_form' %>
         </section>
     </aside>
-</aside>
+</aside> -->
 <div class="col-md-8">
-    <h3>Products</h3>
+    <h1 id="homeheader">Get Inspired </h1>
+    <h5>  <% @user ||= current_user %>
+      <div class="stats">
+        <a href="<%= following_user_path(@user) %>">
+          <strong class="stat">
+            Fans of <%= @user.following.count %> users' product recommendations
+          </strong>
+        </a>
+      </div>
+
+    </h5>
+
     <%= render 'shared/feed' %>
+
 </div>
+
 </div>
 <% else %>
 

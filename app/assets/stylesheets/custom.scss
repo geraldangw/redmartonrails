@@ -38,10 +38,14 @@ body {
   border: 1px solid red;
 }
 
-#profileheader, #homeheader, #createproduct, #users, #signupheader, #login {
+#productview, #productupdate, #profileheader, #homeheader, #createproduct, #users, #signupheader, #login {
   color: rgb(162, 11, 38);
   margin-top: 3%;
   text-align: left;
+}
+
+#login{
+  width: 50%;
 }
 body {
   padding-top: 60px;
@@ -329,6 +333,7 @@ input {
   .timestamp {
     color: $gray-light;
     display: block;
+    font-size: 12px;
     margin-left: 60px;
   }
   .gravatar {
@@ -337,10 +342,14 @@ input {
     margin-top: 5px;
   }
 }
-
-field {
-  width: 80%;
+#reviewform, #username, #reviewtitle {
+  margin-left: 60px;
 }
+
+#followbutton, #unfollowbutton {
+  margin-top: 5%;
+}
+
 aside {
   textarea {
     height: 100px;

@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   has_many :products, dependent: :destroy
   has_many :reviews, dependent: :destroy
   has_many :active_relationships, class_name:  "Relationship",
@@ -12,16 +13,17 @@ class User < ApplicationRecord
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save   :downcase_email
   before_create :create_activation_digest
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+  validates :email, presence: true, length: { maximum: 255 },
+                    format: { with: VALID_EMAIL_REGEX },
+                    uniqueness: { case_sensitive: false }
   validates :firstname, presence: true, length: { maximum: 50 }
   validates :lastname, presence: true, length: { maximum: 50 }
   validates :contactnum, presence: true, length: { maximum: 40 }
   validates :address, presence: true, length: { maximum: 100 }
   validates :zipcode, presence: true, length: { maximum: 6 }
   validates :country, presence: true, length: { maximum: 60 }
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
-  validates :email, presence: true, length: { maximum: 255 },
-                    format: { with: VALID_EMAIL_REGEX },
-                    uniqueness: { case_sensitive: false }
+
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 

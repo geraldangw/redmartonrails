@@ -3,13 +3,17 @@ class ReviewsController < ApplicationController
   before_action :logged_in_user, only: [:create, :destroy]
   before_action :correct_user,   only: :destroy
 
+  def show
+    @product = Product.find(params[:id])
+    @reviews = @product.reviews.paginate(page: params[:page])
+  end
+
   def create
-    # @product = Product.find(params[:product_id])
     @review = current_user.reviews.build(review_params)
     if @review.save
       p "review was saved"
       flash[:success] = 'Review created!'
-      redirect_to root_url
+      redirect_to :back
     else
       @feed_items = []
       render 'static_pages/home'
@@ -19,7 +23,7 @@ class ReviewsController < ApplicationController
   def destroy
     @review.destroy
     flash[:success] = 'Review deleted'
-    redirect_to request.referrer || root_url
+    redirect_to :back
   end
 
   private

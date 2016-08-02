@@ -1,3 +1,5 @@
+<div id="signupandin" class="row">
+
 <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
 
@@ -31,5 +33,7 @@
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+  <%= f.submit yield(:button_text), class: "btn btn-primary", id: "submitbutton" %>
 <% end %>
+
+</div>

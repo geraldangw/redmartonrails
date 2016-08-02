@@ -1,41 +1,37 @@
-# Ruby on Rails Tutorial sample application
+WELCOME TO REDMART's PRODUCT SHARING APPLICATION!
 
-This is the sample application for
-[*Ruby on Rails Tutorial:
-Learn Web Development with Rails*](http://www.railstutorial.org/)
-by [Michael Hartl](http://www.michaelhartl.com/).
+Done by: Gerald Ang. Visit me at geraldangw.github.io
 
-## License
+WHY?
 
-All source code in the [Ruby on Rails Tutorial](http://railstutorial.org/)
-is available jointly under the MIT License and the Beerware License. See
-[LICENSE.md](LICENSE.md) for details.
+We live in a world where groceries shopping is an integral part of our everyday life.
+Saving bit by bit on grocery products can lead to huge savings over a lifetime.
 
-## Getting started
+Here at Redmart, we are well aware of the challenges everyone faces it looking for
+the best deals for daily necessities.
 
-To get started with the app, clone the repo and then install the needed gems:
+If you agree, welcome to Redmart!
 
-```
-$ bundle install --without production
-```
+OVERVIEW
 
-Next, migrate the database:
+Redmart Product Sharing App is a social/community site that allows people to post the
+latest offers and promotions of FMCG products so that everyone can find out where the
+best place is to buy everyday products.
 
-```
-$ rails db:migrate
-```
+FUNCTIONALITY
 
-Finally, run the test suite to verify that everything is working correctly:
+Redmart allows any user to post product tips and latest promotions online, our user-friendly
+interface allows for instant uploads of latest products and promotions.
 
-```
-$ rails test
-```
+The reviews section allows you to post comments or even better deals out there if you come across
+any.
 
-If the test suite passes, you'll be ready to run the app in a local server:
+The fans sections allows you to follow other users if you like the products and tips they introduce.
+This way, you can get inspired by the products of your favorite users everytime you log on!
 
-```
-$ rails server
-```
+Our long term plan is to collect an extensive database of products, prices and promotions and provide a user friendly interface for the user to navigate and get information of the products they need. So stay tuned!
 
-For more information, see the
-[*Ruby on Rails Tutorial* book](http://www.railstutorial.org/book).
+CREDIT
+Alot of the user authentication/authorization/account activation/password reset set up was done follows the Rails tutorial at www.railstutorial.org by Michael Hartl.
+
+Credit to General Assembly's teaching team for the guidance throughout.

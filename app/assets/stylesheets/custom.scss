@@ -32,17 +32,25 @@ body {
 }
 .jumbotron {
   background-image: url(freshfood.jpg);
+  height: 300px;
 }
-#signup, #create, #loginbtn {
+#submitbutton, #signup, #create, #loginbtn {
   background-color: rgb(162, 11, 38);
   border: 1px solid red;
 }
 
-#productview, #productupdate, #profileheader, #homeheader, #createproduct, #users, #signupheader, #login {
+#update, #signupheader, #productview, #productupdate, #profileheader, #homeheader, #createproduct, #users, #signupheader, #login {
   color: rgb(162, 11, 38);
   margin-top: 3%;
   text-align: left;
 }
+
+#signupandin {
+  margin-left: -55%;
+  width: 100%;
+  color: rgb(162, 11, 38);
+}
+
 
 #login{
   width: 50%;
@@ -195,6 +203,7 @@ footer ul li {
 
 .gravatar_edit {
   margin-top: 15px;
+  margin-left: -55%;
 }
 
 .stats {
@@ -364,6 +373,10 @@ span.picture {
   }
 }
 
+#subheader {
+  color: black;
+}
+
 .product {
   display: block;
   font-size: 15px;
@@ -375,4 +388,9 @@ span.picture {
   margin-top: 2%;
   margin-bottom: 2%;
   display: block;
+}
+
+#main {
+  font-size: 30px;
+  margin-top: 5%;
 }
